@@ -1,0 +1,185 @@
+{
+  "history": [
+    {
+      "url": "https://aistudio.google.com/api-keys",
+      "domain": "aistudio.google.com",
+      "risk_score": 0,
+      "status": "SAFE",
+      "action": "ALLOW",
+      "betting_promotion": false,
+      "security_threat": false,
+      "reasons": [
+        "Legitimate Google domain (aistudio.google.com)",
+        "URL path indicates API key management",
+        "No suspicious redirects detected",
+        "No evidence of phishing, malware, or social engineering",
+        "No indication of sports betting or gambling promotion"
+      ],
+      "summary": "The website is a legitimate Google service for managing AI Studio API keys, with no indications of security threats or betting promotion.",
+      "created_at": "2026-10-23T18:25:34.041Z"
+    },
+    {
+      "url": "https://www.google.com/search?q=google+api+key+for+gemini&oq=google+api+key+for+gemini&gs_lcrp=EgZjaHJvbWUqCAgAEEUYJxg7MggIABBFGCcYOzIGCAEQIxgnMg8IAhAAGBQYhwIYsQMYgAQyDQgDEAAYgwEYsQMYgAQyDQgEEAAYgwEYsQMYgAQyDwgFEAAYFBiHAhixAxiABDINCAYQABiDARixAxiABDIGCAcQRRg80gEIMTgzOWowajeoAgCwAgA&sourceid=chrome&source=chrome.ob&ie=UTF-8",
+      "domain": "www.google.com",
+      "risk_score": 0,
+      "status": "SAFE",
+      "action": "ALLOW",
+      "betting_promotion": false,
+      "security_threat": false,
+      "reasons": [
+        "AI analysis completed."
+      ],
+      "summary": "The website is a legitimate Google search results page for 'google api key for gemini', displaying content from official Google domains and YouTube. There are no indicators of security threats or betting promotions.",
+      "created_at": "2026-10-23T18:25:30.533Z"
+    },
+    {
+      "url": "https://hu.dumpledfaints.cfd/gnBehj*SwTYaVf5qzVvVjKT2LalrZZbXRh57Xvh*vdVNa32fVHU5AME6pkFPSA5lnY6UlDxiATlrPFAVlAl5aQ3*JKuGknlqEEsS6IRthsODT79wa6vbMiQUMGtkdRJN8Ck8lCfSO8cu8layrbdA6VjMoiscssH4MEacN705V10KjRLkSMlT?md=eyJ0dmMiOjAsInMiOiIxNzA3eDEwNjciLCJiIjoiODUxeDk1MiIsInIiOiIiLCJxIjoiaHR0cHM6Ly9uZXc4LmhkaHViNHUuY2wvamFpbGVyLTItMjAyNi1oaW5kaS1saW5lLXYyLWhkdGMtZnVsbC1tb3ZpZS8iLCJoIjo2ODkzLCJ0IjotMzMwLCJ6IjozOTQsImsiOjEsInUiOiI2N2Y1MzdmZmE5MjY0MDZmNjgwOTg1IiwiZiI6ZmFsc2UsIndoIjoibm90IGluIGlmcmFtZSIsImloIjoiODY2eDEwNDciLCJlIjoiNHFuaHU3dnNheDlmcjU2IiwibyI6dHJ1ZSwibSI6MTc5Mjc3OTY4MDAzMywidyI6IiU3QiUyMnRpdGxlJTIyJTNBJTIySmFpbGVyJTIwMiUyMCgyMDI2KSUyMFYyJTIwSFEtSERUQyUyMCU1QkhpbmRpLVRhbWlsLVRlbHVndS1LYW4lMjIlMkMlMjJrZXl3b3JkcyUyMiUzQSU1QiUyMkhESHViNHUlMjIlMkMlMjJIREh1YiUyMiUyQyUyMkhESHViNHUlMjBtb3ZpZXMlMjIlMkMlMjJIREh1YjR1LlRWJTIyJTVEJTJDJTIydG9wd29yZHMlMjIlM0ElNUIlMjJpbmxpbmUtYmxvY2slM0IlM0E5JTIyJTJDJTIybGluZS1oZWlnaHQlM0ElM0E5JTIyJTJDJTIyb3ZlcmZsb3clM0ElM0E5JTIyJTVEJTdEIiwidHMiOjAsInByIjoxLjUsImRtIjoxNiwiaGMiOjI4LCJibCI6MC4zMiwiYmMiOjIsInZ2IjoiR29vZ2xlIEluYy4gKEludGVsKSIsInZyIjoiQU5HTEUgKEludGVsLCBJbnRlbChSKSBVSEQgR3JhcGhpY3MgKDB4MDAwMEE3ODgpIERpcmVjdDNEMTEgdnNfNV8wIHBzXzVfMCwgRDNEMTEpIiwiYWMiOjAsImN0IjoidW5rbm93biIsImNldCI6IjRnIiwiY2RsbSI6LTEsImNkbCI6NC43LCJjcnR0IjoxMDAsInRtcyI6MSwiY2UiOnRydWUsImNkIjoyNCwib3IiOiJsYW5kc2NhcGUtcHJpbWFyeSIsImR0Ijp0cnVlLCJjbSI6eyJmYyI6NjUsImhsIjoyLCJtZGMiOjMsIm1pIjoiNzQxNzcyOCw0Mzk1NjMwNTkyLDkxMDc5NjgiLCJwbWkiOiIwV1N0OFdxalZfTFR0aWxSdklvanZZcUV6TjJFIiwicHQiOiJtb3VzZSIsInNkIjo1MjAzLCJzdmMiOjMyLCJzeHkiOiItNiwyNyJ9fQ&pmf=LbIHsmMAaSKuWmW8rI7IVw",
+      "domain": "hu.dumpledfaints.cfd",
+      "risk_score": 95,
+      "status": "DANGEROUS",
+      "action": "BLOCK",
+      "betting_promotion": false,
+      "security_threat": true,
+      "reasons": [
+        "Extremely long and obfuscated URL path.",
+        "Suspicious domain name (dumpledfaints.cfd).",
+        "Redirects to a known movie piracy website (hdhub4u.cl).",
+        "Empty title and visible text content.",
+        "Complex tracking/redirection mechanism in URL parameters."
+      ],
+      "summary": "This website uses an obfuscated URL and suspicious domain to redirect users to a movie piracy site, which is a common vector for malware and unwanted software, indicating a high security threat.",
+      "created_at": "2026-10-23T18:21:37.446Z"
+    },
+    {
+      "url": "https://havingwacks.qpon/lp/nPF3z9LgSuEQV8meZJGG4hi9t2sYgC7ezNnnzx7GVZrFdTcdWrVTM43OMRGJKimmIiZkAneuxoMCaTUxfQXkJxi4WZMF2uN2WCqeZUKyBg8MeF2qisUb1l22C5X.oZazaLwnfC3GzNqYvESfnxbUOuPDWRDbc0wmU496sH5-uMKVwnSKhocGAA0deLRAslnxhs.DDN5vp1U9jLSmhQbebrQpSOvc-oPxeHp.1g8-uKJQg6BSQ7rQSk9STfOddlJ83.elRp8yoRYqTMJMCO6fhCw-xXOwFQd-jbaoHgHTxgorUPLesf.GckY7Zc.sqUQ84hDrZ95Kefj4g49Igst-Gz0mXhYQSvi.Zw9Ao.Rl7vK6vSiSLxweLxSf1Uzr26Hadk.4bVvLQG0h73iWU6goGY9vtObbw6THObud8kI1fcpYROPYqu0qDGokP2LUk1G3xwVQdJGIeX2yFSFDTC20oOGK4Q3xAFTeXdJnbAyj5jTEEF5bJOcE9QUsxPYQCankPtmkyJO2e1BUGRaYZGyyYJy6WFivaX9rhLAHtHzhXva6z8I-M9yOuN17vSMZ9ml23c-B.PiWawVCeGCeUHYVsUJokmo.Cl.ktXkvG7ucQctbllaAwQAOmPQ6Y8AymMqi",
+      "domain": "havingwacks.qpon",
+      "risk_score": 95,
+      "status": "DANGEROUS",
+      "action": "BLOCK",
+      "betting_promotion": false,
+      "security_threat": true,
+      "reasons": [
+        "Social engineering to trick users into installing software.",
+        "Deceptive claim about needing to install a browser for 'safe mode' to 'continue watching'.",
+        "Highly suspicious and obfuscated URL structure.",
+        "Potential for malware distribution or unwanted software installation."
+      ],
+      "summary": "This website employs social engineering tactics to deceive users into installing software, likely posing a risk of malware or unwanted program installation.",
+      "created_at": "2026-10-23T18:21:31.763Z"
+    },
+    {
+      "url": "http://localhost:5173/",
+      "domain": "localhost",
+      "risk_score": 0,
+      "status": "SAFE",
+      "action": "ALLOW",
+      "betting_promotion": false,
+      "security_threat": false,
+      "reasons": [
+        "Localhost URL does not represent a public web threat",
+        "No visible content to assess for threats or promotions",
+        "No suspicious redirects detected"
+      ],
+      "summary": "The website is a localhost address with no content, posing no identifiable security threat or betting promotion.",
+      "created_at": "2026-10-23T18:20:56.076Z"
+    },
+    {
+      "url": "http://localhost:5173/",
+      "domain": "localhost",
+      "risk_score": 0,
+      "status": "SAFE",
+      "action": "ALLOW",
+      "betting_promotion": false,
+      "security_threat": false,
+      "reasons": [
+        "Localhost URL does not represent a public web threat",
+        "No visible content to assess for threats or promotions",
+        "No suspicious redirects detected"
+      ],
+      "summary": "The website is a localhost address with no content, posing no identifiable security threat or betting promotion.",
+      "created_at": "2026-10-23T18:19:52.253Z"
+    },
+    {
+      "url": "http://localhost:5173/",
+      "domain": "localhost",
+      "risk_score": 0,
+      "status": "SAFE",
+      "action": "ALLOW",
+      "betting_promotion": false,
+      "security_threat": false,
+      "reasons": [
+        "Localhost URL does not represent a public web threat",
+        "No visible content to assess for threats or promotions",
+        "No suspicious redirects detected"
+      ],
+      "summary": "The website is a localhost address with no content, posing no identifiable security threat or betting promotion.",
+      "created_at": "2026-10-23T18:19:19.793Z"
+    }
+  ],
+  "blacklist": [
+    "1x-cricketwin2.com"
+  ],
+  "whitelist": [],
+  "blockEvents": [
+    {
+      "source_url": "https://1x-winprizes.com/?click_id=a5175dd0-0234-4e0d-9699-ba049dfbdd6a",
+      "blocked_url": "https://1x-winprizes.com/?click_id=a5175dd0-0234-4e0d-9699-ba049dfbdd6a",
+      "block_type": "phishing",
+      "created_at": "2026-10-23T18:42:11.490Z"
+    },
+    {
+      "source_url": "https://1x-cricketwin2.com/?click_id=4f934408-1957-41fb-acc9-82a2cb2f9aa8",
+      "blocked_url": "https://1x-cricketwin2.com/?click_id=4f934408-1957-41fb-acc9-82a2cb2f9aa8",
+      "block_type": "phishing",
+      "created_at": "2026-10-23T18:28:34.909Z"
+    },
+    {
+      "source_url": "https://new8.hdhub4u.cl/jailer-2-2026-hindi-line-v2-hdtc-full-movie/",
+      "blocked_url": "div[class^=\"ad_\"]",
+      "block_type": "ad",
+      "created_at": "2026-10-23T18:28:28.791Z"
+    },
+    {
+      "source_url": "https://new8.hdhub4u.cl/jailer-2-2026-hindi-line-v2-hdtc-full-movie/",
+      "blocked_url": "div[class^=\"ad_\"]",
+      "block_type": "ad",
+      "created_at": "2026-10-23T18:28:28.782Z"
+    },
+    {
+      "source_url": "https://hu.dumpledfaints.cfd/gnBehj*SwTYaVf5qzVvVjKT2LalrZZbXRh57Xvh*vdVNa32fVHU5AME6pkFPSA5lnY6UlDxiATlrPFAVlAl5aQ3*JKuGknlqEEsS6IRthsODT79wa6vbMiQUMGtkdRJN8Ck8lCfSO8cu8layrbdA6VjMoiscssH4MEacN705V10KjRLkSMlT?md=eyJ0dmMiOjAsInMiOiIxNzA3eDEwNjciLCJiIjoiODUxeDk1MiIsInIiOiIiLCJxIjoiaHR0cHM6Ly9uZXc4LmhkaHViNHUuY2wvamFpbGVyLTItMjAyNi1oaW5kaS1saW5lLXYyLWhkdGMtZnVsbC1tb3ZpZS8iLCJoIjo5MDUxLCJ0IjotMzMwLCJ6IjozOTQsImsiOjEsInUiOiI2N2Y1MzdmZmE5MjY0MDZmNjgwOTg1IiwiZiI6ZmFsc2UsIndoIjoibm90IGluIGlmcmFtZSIsImloIjoiODY2eDEwNDciLCJlIjoic2Q3OWM1cXdsMDNienI2IiwibyI6dHJ1ZSwibSI6MTc5Mjc3OTY3NzY3OCwidyI6IiU3QiUyMnRpdGxlJTIyJTNBJTIySmFpbGVyJTIwMiUyMCgyMDI2KSUyMFYyJTIwSFEtSERUQyUyMCU1QkhpbmRpLVRhbWlsLVRlbHVndS1LYW4lMjIlMkMlMjJrZXl3b3JkcyUyMiUzQSU1QiUyMkhESHViNHUlMjIlMkMlMjJIREh1YiUyMiUyQyUyMkhESHViNHUlMjBtb3ZpZXMlMjIlMkMlMjJIREh1YjR1LlRWJTIyJTVEJTJDJTIydG9wd29yZHMlMjIlM0ElNUIlMjJpbmxpbmUtYmxvY2slM0IlM0E5JTIyJTJDJTIybGluZS1oZWlnaHQlM0ElM0E5JTIyJTJDJTIyb3ZlcmZsb3clM0ElM0E5JTIyJTVEJTdEIiwidHMiOjAsInByIjoxLjUsImRtIjoxNiwiaGMiOjI4LCJibCI6MC4zMiwiYmMiOjIsInZ2IjoiR29vZ2xlIEluYy4gKEludGVsKSIsInZyIjoiQU5HTEUgKEludGVsLCBJbnRlbChSKSBVSEQgR3JhcGhpY3MgKDB4MDAwMEE3ODgpIERpcmVjdDNEMTEgdnNfNV8wIHBzXzVfMCwgRDNEMTEpIiwiYWMiOjAsImN0IjoidW5rbm93biIsImNldCI6IjRnIiwiY2RsbSI6LTEsImNkbCI6NC43LCJjcnR0IjoxMDAsInRtcyI6MSwiY2UiOnRydWUsImNkIjoyNCwib3IiOiJsYW5kc2NhcGUtcHJpbWFyeSIsImR0Ijp0cnVlLCJjbSI6eyJmYyI6NjUsImhsIjoyLCJtZGMiOjMsIm1pIjoiNzI1NzM1Niw0Mzk1NjMwNTkyLDk4Njg1MDQiLCJwbWkiOiIwV1N0OFdxalZfTFR0aWxSdklvanZZcUV6TjJFIiwicHQiOiJtb3VzZSIsInNkIjo1MjAzLCJzdmMiOjMyLCJzeHkiOiItNiwyNyJ9fQ&pmf=LbIHsmMAaSKuWmW8rI7IVw",
+      "blocked_url": "https://apopfast.com/click.php?key=zd4k72sc8u6w6f42hrgr&click_id=8B29F400-CF0E-11F1-8B80-9DB3AB9BCBF9&cost=0.00042648&c=2187427&s=396115&t=0",
+      "block_type": "redirect",
+      "created_at": "2026-10-23T18:21:18.725Z"
+    },
+    {
+      "source_url": "https://1x-cricketwin2.com/?click_id=c888331d-b0f5-45bd-b6c6-4566717e07ef",
+      "blocked_url": "https://1x-cricketwin2.com/?click_id=c888331d-b0f5-45bd-b6c6-4566717e07ef",
+      "block_type": "phishing",
+      "created_at": "2026-10-23T18:21:15.109Z"
+    },
+    {
+      "source_url": "https://1x-cricketwin2.com/?click_id=c888331d-b0f5-45bd-b6c6-4566717e07ef",
+      "blocked_url": "scam-content-landing",
+      "block_type": "phishing",
+      "created_at": "2026-10-23T18:21:12.907Z"
+    },
+    {
+      "source_url": "https://ty.enagemimble.qpon/cx/*jHDGTliR6XyLmmXADNkguu7YWflZEaFJBDw*OShkUTIaK*vViHFfatoh5FY1kDM3VuTp92ZI975U9WHFyjPOtsgFwO8Pz48iru4kjRBiq_j99jlZDVLdYr5hArzRmpopLjDenU_n_E6jkEjvWL3AuHZgb1ss5CXzmYvN7aFnGqnX*2wz_yKfDVbmvNBMXXVSuAdlPQn62o2lnbx2KP9gZEyyM8rCFJXPzQ4*L7AkjDP6sNSQe*yDJbWN2F0sCnqkZuF5isJytvO85JS2l4CNfaYBnYq2MPDbUToGI37wR0a2n3uUuUz7ewp6lAn7BlzwSn7G1XMvx2P4*2NVcup7NNDPrRSoEpUz1i*QgsL1Q0FErkedCc_EHVSRKACjPiiRD8f8Bp6NNJ2SAsNVYcy3G4N2_VhK28BstQHuiAwyawyfPUZq3P_ru_QWDDHjZmZ20tnMdcyEP5iSrGoanoYbnp0CrSI60DqPTlFNUfHR2*cykMhHTz6HRq2e8ohtqRBCe3O7QA_J4gcZxMdvl64MDeqnWAZi31pyOfh8M2ESSXDA*z0gQ5L07S7cEA_TKp45iCi7cyKXnF_c8*rIqch8A8uA2t5aUIVkpSnRrmSuSQHzMu06gvOoiIWmuRk01ifOgKKQ2LRU9Crg8_RmOvuAw?md=eyJ1YWgiOnsiYSI6Ing4NiIsImIiOiI2NCIsInB2IjoiMTkuMC4wIiwidXYiOiIxNTYuMC44MDc4LjQ3IiwidWwiOlt7ImIiOiJOb3Q6QS1CcmFuZCIsInYiOiI4LjAuMC4wIn0seyJiIjoiQ2hyb21pdW0iLCJ2IjoiMTU2LjAuODA3OC40NyJ9LHsiYiI6Ikdvb2dsZSBDaHJvbWUiLCJ2IjoiMTU2LjAuODA3OC40NyJ9XX0sIm4iOjEsInR2YyI6MCwidHZjZCI6MCwibnBsIjoxLCJ0biI6IkEiLCJwdCI6InRhYnVwIiwiYyI6NzExMCwiZCI6LTEsInMiOiIxNzA3eDEwNjciLCJiIjoiODUxeDk1MiIsInIiOiIiLCJxIjoiaHR0cHM6Ly9uZXc4LmhkaHViNHUuY2wvamFpbGVyLTItMjAyNi1oaW5kaS1saW5lLXYyLWhkdGMtZnVsbC1tb3ZpZS8iLCJoIjo4ODEwLCJ0IjotMzMwLCJ6IjozOTQsImsiOjEsInUiOiI2N2Y1MzdmZmE5MjY0MDZmNjgwOTg1IiwiZiI6ZmFsc2UsIndoIjoibm90IGluIGlmcmFtZSIsImloIjoiODY2eDEwNDciLCJlIjoiMnd5Z3hvOTVyYTd1bmxmIiwibyI6dHJ1ZSwibSI6MTc5Mjc3OTY2ODM4MCwidyI6IiU3QiUyMnRpdGxlJTIyJTNBJTIySmFpbGVyJTIwMiUyMCgyMDI2KSUyMFYyJTIwSFEtSERUQyUyMCU1QkhpbmRpLVRhbWlsLVRlbHVndS1LYW4lMjIlMkMlMjJrZXl3b3JkcyUyMiUzQSU1QiUyMkhESHViNHUlMjIlMkMlMjJIREh1YiUyMiUyQyUyMkhESHViNHUlMjBtb3ZpZXMlMjIlMkMlMjJIREh1YjR1LlRWJTIyJTVEJTJDJTIydG9wd29yZHMlMjIlM0ElNUIlMjJpbmxpbmUtYmxvY2slM0IlM0E5JTIyJTJDJTIybGluZS1oZWlnaHQlM0ElM0E5JTIyJTJDJTIyb3ZlcmZsb3clM0ElM0E5JTIyJTVEJTdEIiwidHMiOjAsInByIjoxLjUsImRtIjoxNiwiaGMiOjI4LCJibCI6MC4zMiwiYmMiOjIsInZ2IjoiR29vZ2xlIEluYy4gKEludGVsKSIsInZyIjoiQU5HTEUgKEludGVsLCBJbnRlbChSKSBVSEQgR3JhcGhpY3MgKDB4MDAwMEE3ODgpIERpcmVjdDNEMTEgdnNfNV8wIHBzXzVfMCwgRDNEMTE",
+      "blocked_url": "https://apopfast.com/click.php?key=zd4k72sc8u6w6f42hrgr&click_id=85368260-CF0E-11F1-864A-4F11A5C27EBF&cost=0.00044848&c=2187427&s=396115&t=0",
+      "block_type": "redirect",
+      "created_at": "2026-10-23T18:21:08.750Z"
+    },
+    {
+      "source_url": "https://new8.hdhub4u.cl/jailer-2-2026-hindi-line-v2-hdtc-full-movie/",
+      "blocked_url": "div[class^=\"ad_\"]",
+      "block_type": "ad",
+      "created_at": "2026-10-23T18:21:01.648Z"
+    },
+    {
+      "source_url": "https://new8.hdhub4u.cl/jailer-2-2026-hindi-line-v2-hdtc-full-movie/",
+      "blocked_url": "div[class^=\"ad_\"]",
+      "block_type": "ad",
+      "created_at": "2026-10-23T18:21:01.645Z"
+    }
+  ]
+}

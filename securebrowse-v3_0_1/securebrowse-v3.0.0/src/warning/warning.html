@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureBrowse - Page Blocked</title>
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --border-color: rgba(239, 68, 68, 0.4);
+      --danger-color: #ef4444;
+      --text-main: #f8fafc;
+      --text-sub: #94a3b8;
+      --primary-glow: rgba(239, 68, 68, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+      padding: 20px;
+    }
+
+    /* Glow backdrop effects */
+    .glow-backdrop {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(0,0,0,0) 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 650px;
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 40px var(--primary-glow);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      z-index: 2;
+      animation: shake 0.5s ease-in-out;
+    }
+
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+      20%, 40%, 60%, 80% { transform: translateX(5px); }
+    }
+
+    .warning-icon {
+      font-size: 72px;
+      color: var(--danger-color);
+      margin-bottom: 20px;
+      display: inline-block;
+      filter: drop-shadow(0 0 15px rgba(239, 68, 68, 0.6));
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 0%, #ff9999 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .blocked-url-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 12px 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 14px;
+      word-break: break-all;
+      color: #ff9999;
+      text-align: left;
+    }
+
+    p.description {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text-sub);
+      margin-bottom: 24px;
+    }
+
+    .details-box {
+      text-align: left;
+      margin-bottom: 30px;
+      background: rgba(15, 23, 42, 0.4);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .details-title {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .threat-score-badge {
+      background: rgba(239, 68, 68, 0.2);
+      color: var(--danger-color);
+      border: 1px solid var(--danger-color);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .reasons-list {
+      list-style: none;
+    }
+
+    .reasons-list li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      position: relative;
+      padding-left: 20px;
+      color: #cbd5e1;
+      line-height: 1.4;
+    }
+
+    .reasons-list li::before {
+      content: "•";
+      color: var(--danger-color);
+      font-weight: bold;
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+      top: -3px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      border: none;
+    }
+
+    .btn-safety {
+      background: var(--danger-color);
+      color: white;
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    }
+
+    .btn-safety:hover {
+      background: #dc2626;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+    }
+
+    .btn-bypass {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--text-sub);
+    }
+
+    .btn-bypass:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-main);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.2);
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/warning-YtMkYOBJ.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-Dezn_h7o.js">
+</head>
+<body>
+  <div class="glow-backdrop"></div>
+  
+  <div class="container">
+    <div class="warning-icon">⚠️</div>
+    <h1>Page Blocked by SecureBrowse</h1>
+    
+    <div class="blocked-url-card" id="blocked-url">
+      Loading URL...
+    </div>
+    
+    <p class="description">
+      SecureBrowse intercepted this navigation because the page was identified as unsafe or as promoting content blocked by your protection settings. Review the analysis below before deciding whether to proceed.
+    </p>
+    
+    <div class="details-box">
+      <div class="details-title">
+        <span>Analysis Findings</span>
+        <span class="threat-score-badge" id="threat-score">Score: 0/100</span>
+      </div>
+      <ul class="reasons-list" id="reasons-list">
+        <li>Analyzing URL characteristics...</li>
+      </ul>
+    </div>
+
+    <div class="details-box" id="suggested-box" style="display:none; border-color: rgba(34,197,94,0.4);">
+      <div class="details-title">
+        <span>Looks Like It's Impersonating</span>
+      </div>
+      <p style="font-size:14px; color:#cbd5e1; margin-bottom:14px;" id="suggested-text"></p>
+      <button class="btn btn-safety" style="background:#22c55e; box-shadow:0 4px 15px rgba(34,197,94,0.4); width:100%;" id="btn-go-genuine">Go to the Real Site</button>
+    </div>
+    
+    <div class="actions">
+      <button class="btn btn-safety" id="btn-safety">Back to Safety</button>
+      <button class="btn btn-bypass" id="btn-bypass">Proceed Anyway (Unsafe)</button>
+    </div>
+    
+    <div class="footer">
+      Powered by SecureBrowse AI Security Engine
+    </div>
+  </div>
+
+</body>
+</html>

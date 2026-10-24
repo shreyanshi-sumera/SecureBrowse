@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>SecureBrowse Dashboard</title>
+    <link rel="stylesheet" href="/dashboard/styles.css">
+    <script src="/dashboard/app.js" defer></script>
+  </head>
+  <body>
+    <div class="shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="SecureBrowse Dashboard home">
+          <span class="brand-mark">S</span>
+          <span>Secure<span class="brand-accent">Browse</span></span>
+        </a>
+        <div class="connection">
+          <span id="health-dot" class="health-dot"></span>
+          <span id="health-label">Connecting to backend...</span>
+          <button id="refresh-button" class="icon-button" type="button" aria-label="Refresh dashboard">Refresh</button>
+        </div>
+      </header>
+
+      <main>
+        <section class="welcome">
+          <div>
+            <p class="eyebrow">LOCAL SECURITY CONSOLE</p>
+            <h1>Dashboard</h1>
+            <p class="muted">Review scans and manage your trusted and blocked domains.</p>
+          </div>
+          <p id="updated-at" class="updated-at">Waiting for backend</p>
+        </section>
+
+        <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+
+        <section id="auth-panel" class="panel auth-panel" hidden>
+          <div>
+            <h2>Backend authorization required</h2>
+            <p class="muted">Enter the local backend API key configured as <code>SECUREBROWSE_API_KEY</code>.</p>
+          </div>
+          <form id="auth-form" class="inline-form">
+            <label class="visually-hidden" for="api-key">Backend API key</label>
+            <input id="api-key" type="password" autocomplete="off" placeholder="Backend API key">
+            <button class="button button-secondary" type="submit">Save for this tab</button>
+          </form>
+        </section>
+
+        <section class="stats" aria-label="Dashboard summary">
+          <article class="stat-card">
+            <span class="stat-label">Recent scans</span>
+            <strong id="stat-scans">—</strong>
+            <span class="stat-foot">Stored scan history</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">High risk</span>
+            <strong id="stat-risk">—</strong>
+            <span class="stat-foot">Dangerous or blocked results</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Blocked domains</span>
+            <strong id="stat-blacklist">—</strong>
+            <span class="stat-foot">Your custom blacklist</span>
+          </article>
+          <article class="stat-card">
+            <span class="stat-label">Trusted domains</span>
+            <strong id="stat-whitelist">—</strong>
+            <span class="stat-foot">Your custom whitelist</span>
+          </article>
+        </section>
+
+        <section class="panel scan-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">GEMINI ANALYSIS</p>
+              <h2>Scan a website</h2>
+            </div>
+          </div>
+          <form id="scan-form" class="scan-form">
+            <label class="visually-hidden" for="scan-url">Website URL</label>
+            <input id="scan-url" type="url" placeholder="https://example.com" required>
+            <button id="scan-button" class="button button-primary" type="submit">Analyze URL</button>
+          </form>
+          <p class="form-hint">The website URL is sent to Gemini for analysis. This dashboard does not fetch or open the website.</p>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">LATEST ACTIVITY</p>
+                <h2>Scan history</h2>
+              </div>
+              <span id="history-count" class="count-pill">0</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Website</th><th>Risk</th><th>Result</th><th>Scanned</th></tr>
+                </thead>
+                <tbody id="history-body">
+                  <tr><td colspan="4" class="empty-state">Loading scan history...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <aside class="list-stack">
+            <article class="panel">
+              <div class="section-heading">
+                <div><p class="eyebrow">CUSTOM RULES</p><h2>Blocked domains</h2></div>
+                <span id="blacklist-count" class="count-pill">0</span>
+              </div>
+              <form id="blacklist-form" class="domain-form">
+                <label class="visually-hidden" for="blacklist-domain">Domain to block</label>
+                <input id="blacklist-domain" type="text" placeholder="example.com" required>
+                <button class="button button-secondary" type="submit">Add</button>
+              </form>
+              <ul id="blacklist-list" class="domain-list"><li class="empty-state">Loading...</li></ul>
+            </article>
+            <article class="panel">
+              <div class="section-heading">
+                <div><p class="eyebrow">CUSTOM RULES</p><h2>Trusted domains</h2></div>
+                <span id="whitelist-count" class="count-pill">0</span>
+              </div>
+              <form id="whitelist-form" class="domain-form">
+                <label class="visually-hidden" for="whitelist-domain">Domain to trust</label>
+                <input id="whitelist-domain" type="text" placeholder="example.com" required>
+                <button class="button button-secondary" type="submit">Add</button>
+              </form>
+              <ul id="whitelist-list" class="domain-list"><li class="empty-state">Loading...</li></ul>
+            </article>
+          </aside>
+        </section>
+      </main>
+      <footer>SecureBrowse runs locally. Keep this service bound to 127.0.0.1.</footer>
+    </div>
+  </body>
+</html>

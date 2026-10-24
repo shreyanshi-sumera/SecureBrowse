@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SecureBrowse - Control Dashboard</title>
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: rgba(30, 41, 59, 0.5);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --primary-color: #3b82f6;
+      --primary-hover: #2563eb;
+      --success-color: #10b981;
+      --danger-color: #ef4444;
+      --warning-color: #f59e0b;
+      --text-main: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 20px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-icon {
+      font-size: 32px;
+      filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.5));
+    }
+
+    .logo h1 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .logo p {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .full-width {
+      grid-column: 1 / -1;
+    }
+
+    .panel {
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .panel h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 10px;
+    }
+
+    /* Switch toggle styles */
+    .setting-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .setting-info h3 {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    .setting-info p {
+      font-size: 13px;
+      color: var(--text-sub);
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 48px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #334155;
+      transition: .3s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+    }
+
+    input:checked + .slider {
+      background-color: var(--success-color);
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(24px);
+    }
+
+    /* Form selector styles */
+    select {
+      background: #1e293b;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Whitelist / Blacklist List styles */
+    .list-manager {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      background: #0f172a;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      outline: none;
+    }
+
+    input[type="text"]:focus {
+      border-color: var(--primary-color);
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .rule-items {
+      max-height: 200px;
+      overflow-y: auto;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      background: rgba(15, 23, 42, 0.4);
+    }
+
+    .rule-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .rule-item:last-child {
+      border-bottom: none;
+    }
+
+    .rule-domain {
+      font-size: 14px;
+      font-family: monospace;
+    }
+
+    .rule-delete {
+      color: var(--danger-color);
+      cursor: pointer;
+      font-size: 14px;
+      background: none;
+      border: none;
+    }
+
+    /* History Table Styles */
+    .history-table-container {
+      overflow-x: auto;
+      margin-top: 15px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th {
+      padding: 12px 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-sub);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-weight: 600;
+    }
+
+    td {
+      padding: 14px 16px;
+      font-size: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      word-break: break-all;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .badge-safe {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--success-color);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .badge-suspicious {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--warning-color);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .badge-dangerous {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--danger-color);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .btn-clear {
+      background: transparent;
+      border: 1px solid var(--danger-color);
+      color: var(--danger-color);
+      float: right;
+    }
+
+    .btn-clear:hover {
+      background: rgba(239, 68, 68, 0.1);
+    }
+
+    .history-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+  </style>
+  <script src="/assets/backend-auth.js"></script>
+  <script type="module" crossorigin src="/assets/options-ui.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-Dezn_h7o.js">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">🛡️</span>
+        <div>
+          <h1>SecureBrowse Dashboard</h1>
+          <p>AI-powered browser threat intelligence & ad blocker settings</p>
+        </div>
+      </div>
+      <button class="btn btn-primary" id="btn-sync">Sync settings</button>
+    </header>
+
+    <div class="content-grid">
+      <!-- 1. Settings Panel -->
+      <div class="panel">
+        <h2>⚙️ Extension Settings</h2>
+        
+        <div class="setting-row">
+          <div class="setting-info">
+            <h3>Global Protection</h3>
+            <p>Enable threat detection and navigation monitoring</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="chk-global-protection" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h3>Ad Blocker</h3>
+            <p>Block tracking, ad hosts, and intrusive dynamic banners</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="chk-ad-blocker" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h3>Redirect Blocker</h3>
+            <p>Block continuous script redirects and target hijacking</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="chk-redirect-blocker" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h3>Betting Promotion Blocker</h3>
+            <p>Block pages actively promoting betting, sportsbooks, or online casinos</p>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="chk-betting-blocker" checked>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="setting-row">
+          <div class="setting-info">
+            <h3>Protection Threshold</h3>
+            <p>Configure extension action sensitivity</p>
+          </div>
+          <select id="sel-protection-level">
+            <option value="low">Low (Warn Dangerous)</option>
+            <option value="medium" selected>Medium (Block Dangerous, Warn Suspicious)</option>
+            <option value="high">High (Block Suspicious & Dangerous)</option>
+          </select>
+        </div>
+        <div class="setting-row">
+          <div class="setting-info">
+            <h3>Backend API Key</h3>
+            <p>Only needed if your backend has SECUREBROWSE_API_KEY set. Sent as X-API-Key.</p>
+          </div>
+          <input type="password" id="txt-backend-api-key" placeholder="Leave blank if backend has no key set" style="width:220px; padding:8px; border-radius:6px; border:1px solid var(--border-color, #333); background:var(--bg-input, #1a1a1a); color:var(--text-main, #eee);">
+        </div>
+      </div>
+
+      <!-- 2. Rules Manager Panel -->
+      <div class="panel">
+        <h2>🔒 Custom Whitelist</h2>
+        <div class="list-manager">
+          <input type="text" id="txt-whitelist-domain" placeholder="example.com">
+          <button class="btn btn-primary" id="btn-add-whitelist">Add Domain</button>
+        </div>
+        <div class="rule-items" id="whitelist-items">
+          <div style="padding: 15px; color: var(--text-sub); text-align: center;">No whitelisted domains.</div>
+        </div>
+
+        <h2 style="margin-top: 30px;">🚫 Custom Blacklist</h2>
+        <div class="list-manager">
+          <input type="text" id="txt-blacklist-domain" placeholder="malicious-site.com">
+          <button class="btn btn-primary" id="btn-add-blacklist">Add Domain</button>
+        </div>
+        <div class="rule-items" id="blacklist-items">
+          <div style="padding: 15px; color: var(--text-sub); text-align: center;">No blacklisted domains.</div>
+        </div>
+      </div>
+
+      <!-- 3a. Diagnostics Panel -->
+      <div class="panel full-width">
+        <div class="history-actions">
+          <h2>🔧 Diagnostics Log</h2>
+        </div>
+        <p style="font-size:13px; color:var(--text-sub); margin-bottom:15px;">Internal errors the extension has hit (storage failures, DNR update failures, etc.) — useful when something seems broken and you're not sure why.</p>
+        <div id="diagnostics-rows" style="font-family:monospace; font-size:12px; color:var(--text-sub); max-height:200px; overflow-y:auto;">No diagnostics logged.</div>
+      </div>
+
+      <!-- 3. Currently Blocked Domains Panel -->
+      <div class="panel full-width">
+        <div class="history-actions">
+          <h2>🚨 Currently Blocked Domains</h2>
+        </div>
+        <p style="font-size:13px; color:var(--text-sub); margin-bottom:15px;">Domains network-blocked right now, why they were blocked, and when the block auto-expires. Click "Trust &amp; Unblock" if one of these is wrong.</p>
+        <div class="history-table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 30%">Domain</th>
+                <th style="width: 20%">Blocked By</th>
+                <th style="width: 20%">Blocked At</th>
+                <th style="width: 15%">Auto-Expires</th>
+                <th style="width: 15%">Action</th>
+              </tr>
+            </thead>
+            <tbody id="blocked-domains-rows">
+              <tr>
+                <td colspan="5" style="text-align: center; color: var(--text-sub); padding: 30px;">No domains currently blocked.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- 4. Scan History Panel -->
+      <div class="panel full-width">
+        <div class="history-actions">
+          <h2>🕰️ Scan & Threat History</h2>
+          <button class="btn btn-clear" id="btn-clear-history" title="Clear local blocked counts and statistics">Clear Statistics</button>
+        </div>
+        <div class="history-table-container">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 40%">Website URL</th>
+                <th style="width: 15%">Risk Score</th>
+                <th style="width: 15%">Status</th>
+                <th style="width: 15%">Action</th>
+                <th style="width: 15%">Time Checked</th>
+              </tr>
+            </thead>
+            <tbody id="history-rows">
+              <tr>
+                <td colspan="5" style="text-align: center; color: var(--text-sub); padding: 30px;">
+                  No recent threat scans.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border-color); font-size: 13px; color: var(--text-sub);">
+        SecureBrowse Security Platform &bull; <a href="../privacy/privacy.html" target="_blank" style="color: var(--primary-color); text-decoration: none;">Privacy Policy</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureBrowse - Scanning Redirect Chain...</title>
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --card-bg: rgba(30, 41, 59, 0.45);
+      --border-color: rgba(59, 130, 246, 0.3);
+      --primary-color: #3b82f6;
+      --text-main: #f8fafc;
+      --text-sub: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      background: var(--card-bg);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(59, 130, 246, 0.1);
+    }
+
+    /* Beautiful CSS loader */
+    .spinner {
+      width: 60px;
+      height: 60px;
+      border: 4px solid rgba(59, 130, 246, 0.1);
+      border-left-color: var(--primary-color);
+      border-radius: 50%;
+      display: inline-block;
+      animation: spin 1s linear infinite;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.5));
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      background: linear-gradient(135deg, #ffffff 0%, #93c5fd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--text-sub);
+      margin-bottom: 20px;
+    }
+
+    .target-url {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 12px;
+      word-break: break-all;
+      color: #93c5fd;
+      text-align: left;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 11px;
+      color: rgba(255, 255, 255, 0.15);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/scanning-DOTr5H6Z.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-Dezn_h7o.js">
+</head>
+<body>
+  <div class="container">
+    <div class="spinner"></div>
+    <h1>Analyzing Redirect Chain</h1>
+    <p>
+      SecureBrowse has intercepted a redirection sequence. We are analyzing the safety of the target URL to ensure it is secure from phishing, drive-by malware, and hijacking scripts...
+    </p>
+    <div class="target-url" id="lbl-target-url">
+      Resolving destination...
+    </div>
+    <div class="footer">
+      SecureBrowse Active Protection
+    </div>
+  </div>
+
+</body>
+</html>

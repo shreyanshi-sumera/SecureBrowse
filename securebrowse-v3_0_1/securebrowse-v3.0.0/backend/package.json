@@ -1,0 +1,13 @@
+{
+  "name": "securebrowse-ai-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local Gemini-powered threat analysis backend for SecureBrowse",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node --env-file=.env server.js",
+    "test": "node --test"
+  }
+}

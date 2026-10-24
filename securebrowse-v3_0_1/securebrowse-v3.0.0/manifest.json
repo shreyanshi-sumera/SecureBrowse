@@ -1,0 +1,75 @@
+{
+  "manifest_version": 3,
+  "name": "SecureBrowse",
+  "version": "3.0.0",
+  "description": "AI-powered Browser Threat Intelligence Platform.",
+  "icons": {
+    "16": "public/icons/icon-16.png",
+    "48": "public/icons/icon-48.png",
+    "128": "public/icons/icon-128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "notifications",
+    "webNavigation",
+    "declarativeNetRequest",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>",
+    "http://127.0.0.1:8000/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ad_domains",
+        "enabled": true,
+        "path": "rules/ad_domains.json"
+      }
+    ]
+  },
+  "action": {
+    "default_title": "SecureBrowse",
+    "default_popup": "src/popup/popup.html"
+  },
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/betting-promotion.js",
+        "assets/content.ts-CZJr8Dh7.js"
+      ],
+      "matches": [
+        "<all_urls>"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "js": [
+        "assets/ai-page-context.js"
+      ],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "src/options/options.html",
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "assets/content.ts-CZJr8Dh7.js",
+        "assets/penguins/*"
+      ],
+      "use_dynamic_url": false
+    }
+  ]
+}
